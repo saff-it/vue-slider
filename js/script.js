@@ -6,7 +6,6 @@ const app = new Vue (
         data: {  
 
             index : 0,
-            
 
             slides : [
                 {
@@ -43,8 +42,7 @@ const app = new Vue (
                 this.index = this.index + 1;
                 if (this.index === this.slides.length){
                     this.index = 0;
-                }
-                
+                }    
                 
             },
 
@@ -53,9 +51,10 @@ const app = new Vue (
                 if (this.index === - 1){
                     this.index = this.slides.length - 1;
                 }
-                
-                
-            }
+                          
+            },
+
+
            
             
         },
