@@ -6,6 +6,7 @@ const app = new Vue (
         data: {  
 
             index : 0,
+            clock: null,
 
             slides : [
                 {
@@ -64,12 +65,23 @@ const app = new Vue (
 
               }
             },
+
+            startInterval: function(){
+              clock = setInterval(this.nextSlide, 1000);
+
+            },
+
+            stopInterval: function(){
+                clearInterval(this.clock);
+
+            },
+
             
         },
 
-        created () {
-            setInterval(this.nextSlide, 3000);
-        },
+        // created () {
+        //     setInterval(this.nextSlide, 3000);
+        // },
 
 
     },
