@@ -64,9 +64,11 @@ const app = new Vue (
 
               }
             },
-
-           
             
+        },
+
+        created () {
+            setInterval(this.nextSlide, 3000);
         },
 
 
