@@ -68,7 +68,7 @@ const app = new Vue (
 
         methods: {
             clickToActive: function() {
-
+                
             }
            
             
