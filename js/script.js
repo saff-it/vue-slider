@@ -36,7 +36,9 @@ const app = new Vue (
         data: {  
 
             index : 0,
-            slides: [
+            activeElement : document.querySelector('div.thumb'),
+
+            slides : [
                 {
                     image: 'img/01.jpg',
                     title: 'Svezia',
@@ -62,17 +64,24 @@ const app = new Vue (
                     title: 'Paradise',
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 }
-            ],         
+            ]        
             
         },
 
         methods: {
-            clickToActive: function() {
+            clickToActive: function(element) {
+                if (element.classList.contains('active')){
+                    element.classList.remove('active');
+                } else {
+                    element.classList.add('active');
+                }
                 
             }
            
             
         },
+
+
     },
 
 );
