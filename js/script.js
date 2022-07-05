@@ -54,6 +54,16 @@ const app = new Vue (
                           
             },
 
+            setCurrent: function(value){
+                this.index = value;
+            },
+
+            setActive: function(value){
+              if (this.index == value){
+                return 'active';
+
+              }
+            },
 
            
             
