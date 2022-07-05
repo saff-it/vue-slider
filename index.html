@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div @click="clickToActive(activeElement)" class="next"></div>
+                    <div @click="prevSlide" class="prev"></div>
+                    <div @click="nextSlide" class="next"></div>
                     <div class="thumb active">
                         <img :src="slides[0].image" alt="slides[0].title"/>
                     </div>
